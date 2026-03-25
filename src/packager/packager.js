@@ -276,12 +276,12 @@ class Packager extends EventTarget {
   async loadResources () {
     const texts = [COPYRIGHT_HEADER];
     if (this.project.analysis.usesMusic) {
-      texts.push(await this.fetchLargeAsset('scaffolding', 'text'));
+      //texts.push(await this.fetchLargeAsset('scaffolding', 'text'));
     } else {
-      texts.push(await this.fetchLargeAsset('scaffolding-min', 'text'));
+      //texts.push(await this.fetchLargeAsset('scaffolding-min', 'text'));
     }
     if (Object.values(this.getAddonOptions()).some((i) => i)) {
-      texts.push(await this.fetchLargeAsset('addons', 'text'));
+      //texts.push(await this.fetchLargeAsset('addons', 'text'));
     }
     this.script = texts.join('\n').replace(/<\/script>/g,"</scri'+'pt>");
   }
